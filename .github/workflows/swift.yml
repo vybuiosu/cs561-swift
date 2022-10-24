@@ -18,8 +18,8 @@ jobs:
       with:
         python-version: 3.8
         
-#     - name: Build
-#       run: cd MyLibrary; swift build -v; cd ..
+    - name: Build
+      run: cd MyLibrary; swift build -v; cd ..
     
     
     - run: pip install fastapi
@@ -27,5 +27,5 @@ jobs:
     - name: Run Mock Server
       run: uvicorn WeatherMockAPI:app --reload --port 8000 &
 
-#     - name: Run tests
-#       run: cd MyLibrary; swift test -v; cd ..
+    - name: Run tests
+      run: cd MyLibrary; swift test -v; cd ..
